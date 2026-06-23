@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bc1b5yjns31yx"]
+
+[ext_resource type="Script" uid="uid://k722qdjdj67x" path="res://mid_trees.gd" id="1_sgud4"]
+[ext_resource type="Texture2D" uid="uid://br4awmlonjjk5" path="res://assets/img/background/plx-3.png" id="2_abnpm"]
+
+[node name="mid trees" type="Parallax2D" unique_id=1523140083]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-30, 0)
+script = ExtResource("1_sgud4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=349352878]
+texture = ExtResource("2_abnpm")
+centered = false

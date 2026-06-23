@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bd3ajwv0c3ei0"]
+
+[ext_resource type="Script" uid="uid://c653wty1a0u5f" path="res://rock.gd" id="1_68h2w"]
+[ext_resource type="Texture2D" uid="uid://swuh2664346h" path="res://assets/img/obstacles/rock.png" id="1_o0qsl"]
+
+[node name="rock" type="Area2D" unique_id=2063773726]
+script = ExtResource("1_68h2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1057152859]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_o0qsl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1852670570]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-16, -13.333334, -21.333334, -10.666667, -24, -8, -26.666668, -5.3333335, -29.333334, 8, -26.666668, 13.333334, 28.5, 15, 24, 8, 16, 5.3333335, 13.333334, 2.6666667, 10.666667, -2.6666667, 8, -5.3333335, 5.3333335, -8, 0, -8, -5.3333335, -13.333334, -10.666667, -13.333334)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

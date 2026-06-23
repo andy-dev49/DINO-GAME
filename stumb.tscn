@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b8qtiu5hgs5j6"]
+
+[ext_resource type="Texture2D" uid="uid://j6g5tmqkho7r" path="res://assets/img/obstacles/stump.png" id="1_pd8nx"]
+[ext_resource type="Script" uid="uid://4fda1hnanhqc" path="res://stumb.gd" id="1_w0ro7"]
+
+[node name="stumb" type="Area2D" unique_id=427894130]
+texture_filter = 1
+script = ExtResource("1_w0ro7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=371847302]
+scale = Vector2(3, 3)
+texture = ExtResource("1_pd8nx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=708414606]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(10.666667, -8, 10.666667, -13.333334, 8, -8, 5.3333335, -10.666667, 2.6666667, -8, 0, -2.6666667, -5.3333335, -2.6666667, -10.666667, -5.3333335, -13.333334, 2.6666667, -13.333334, 5.3333335, -18.666668, 8, -21.333334, 13.333334, -18.666668, 13.333334, 20, 14, 21.333334, 10.666667, 18.666668, 8, 16, 5.3333335, 13.333334, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

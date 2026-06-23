@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crh1ks5w0wlvw"]
+
+[ext_resource type="Script" uid="uid://bcrrnkapp2wdp" path="res://barrel.gd" id="1_a12vh"]
+[ext_resource type="Texture2D" uid="uid://82g10korsmj7" path="res://assets/img/obstacles/barrel.png" id="1_n8un1"]
+
+[node name="barrel" type="Area2D" unique_id=547078002]
+script = ExtResource("1_a12vh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=362705224]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_n8un1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=436881199]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-13.5, -13, -13.5, 13, 13.5, 13, 13.5, -13)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

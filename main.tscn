@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dou1855y72atv"]
+
+[ext_resource type="Script" uid="uid://bp73v0ggyko4y" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://d8smd4h5kjed" path="res://ground.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b8qtiu5hgs5j6" path="res://stumb.tscn" id="2_4c57u"]
+[ext_resource type="PackedScene" uid="uid://crh1ks5w0wlvw" path="res://barrel.tscn" id="3_efxa6"]
+[ext_resource type="PackedScene" uid="uid://pbps12igt5r0" path="res://dino.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bd3ajwv0c3ei0" path="res://rock.tscn" id="4_dg77c"]
+[ext_resource type="PackedScene" uid="uid://vb2mkgs12qnb" path="res://rich_text_label.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cvd5jhx7w0y6q" path="res://bird.tscn" id="6_dg77c"]
+[ext_resource type="Texture2D" uid="uid://rhkth0widskd" path="res://assets/img/background/plx-1.png" id="7_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://d1ef3o348wudr" path="res://game_name.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://q2v2cih2tg5c" path="res://far_trees.tscn" id="7_dg77c"]
+[ext_resource type="PackedScene" uid="uid://bc1b5yjns31yx" path="res://mid_trees.tscn" id="9_yaehf"]
+[ext_resource type="PackedScene" uid="uid://c7e27dvcw4rk3" path="res://close_tree.tscn" id="10_074og"]
+[ext_resource type="PackedScene" uid="uid://dgp5d3ql8g6u8" path="res://closed_tree.tscn" id="11_cegan"]
+[ext_resource type="PackedScene" uid="uid://dbemvimxy0w7w" path="res://score_text.tscn" id="17_074og"]
+[ext_resource type="Script" uid="uid://bqfwj36oy36y1" path="res://camera_2d.gd" id="17_82xsv"]
+[ext_resource type="PackedScene" uid="uid://dxvddd87gnrry" path="res://press_text.tscn" id="17_cegan"]
+[ext_resource type="PackedScene" uid="uid://b0tdnw0ixdtjb" path="res://game_over.tscn" id="17_yaehf"]
+[ext_resource type="PackedScene" uid="uid://ddtqggpviyysn" path="res://high_score.tscn" id="19_cegan"]
+
+[node name="Main" type="Node" unique_id=1721247440]
+script = ExtResource("1_1bvp3")
+obesctal_scenes = Array[PackedScene]([ExtResource("2_4c57u"), ExtResource("4_dg77c"), ExtResource("3_efxa6"), ExtResource("6_dg77c")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=841028004]
+scale = Vector2(2, 1)
+texture = ExtResource("7_2cqfq")
+centered = false
+
+[node name="far trees" parent="." unique_id=476780373 instance=ExtResource("7_dg77c")]
+
+[node name="mid trees" parent="." unique_id=1523140083 instance=ExtResource("9_yaehf")]
+
+[node name="close tree" parent="." unique_id=1518767519 instance=ExtResource("10_074og")]
+
+[node name="closed tree" parent="." unique_id=431907774 instance=ExtResource("11_cegan")]
+
+[node name="Ground" parent="." unique_id=1228121222 instance=ExtResource("2_1bvp3")]
+
+[node name="game_name" parent="." unique_id=1166990926 instance=ExtResource("7_272bh")]
+offset_top = 22.0
+offset_bottom = 198.0
+
+[node name="spawner" type="Marker2D" parent="." unique_id=79136310]
+position = Vector2(1288, 536)
+
+[node name="dino" parent="." unique_id=1300667563 instance=ExtResource("3_lquwl")]
+position = Vector2(104, 503)
+
+[node name="obseclate_timer" type="Timer" parent="." unique_id=299859785]
+wait_time = 2.0
+autostart = true
+
+[node name="bird_spawner" type="Marker2D" parent="." unique_id=1331236138]
+position = Vector2(1496, 424)
+
+[node name="bird_timer" type="Timer" parent="." unique_id=1189096950]
+wait_time = 15.0
+autostart = true
+
+[node name="RichTextLabel" parent="." unique_id=1892790147 instance=ExtResource("17_yaehf")]
+offset_left = 24.0
+offset_top = -60.0
+offset_right = 24.0
+offset_bottom = 116.0
+
+[node name="Score_Timer" type="Timer" parent="." unique_id=1709771349]
+wait_time = 0.1
+autostart = true
+
+[node name="score_text" parent="." unique_id=699212903 instance=ExtResource("17_074og")]
+offset_right = 96.0
+
+[node name="RichTextLabel2" parent="." unique_id=1011665865 instance=ExtResource("5_lquwl")]
+offset_left = 584.0
+offset_top = 8.0
+offset_right = 688.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1283466889]
+position = Vector2(576, 328)
+script = ExtResource("17_82xsv")
+
+[node name="press_text" parent="." unique_id=1154628722 instance=ExtResource("17_cegan")]
+script = null
+
+[node name="high_score" parent="." unique_id=1020851937 instance=ExtResource("19_cegan")]
+
+[connection signal="timeout" from="obseclate_timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="bird_timer" to="." method="_on_bird_timer_timeout"]
+[connection signal="timeout" from="Score_Timer" to="." method="_on_score_timer_timeout"]

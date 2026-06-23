@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dbemvimxy0w7w"]
+
+[ext_resource type="FontFile" uid="uid://cyscx3uyp3w0p" path="res://assets/fonts/retro.ttf" id="1_6wlvt"]
+[ext_resource type="Script" uid="uid://87qd1ivlagc5" path="res://score_text.gd" id="2_6nqru"]
+
+[node name="score_text" type="Label" unique_id=699212903]
+offset_right = 80.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0, 1, 0.54901963, 1)
+theme_override_fonts/font = ExtResource("1_6wlvt")
+theme_override_font_sizes/font_size = 22
+text = "score:"
+script = ExtResource("2_6nqru")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dxvddd87gnrry"]
+
+[ext_resource type="FontFile" uid="uid://cyscx3uyp3w0p" path="res://assets/fonts/retro.ttf" id="1_yoymy"]
+[ext_resource type="Script" uid="uid://cjg525jif1yc4" path="res://press_text.gd" id="2_4pk4p"]
+
+[node name="press_text" type="RichTextLabel" unique_id=1011665865]
+anchors_preset = -1
+anchor_top = 0.432
+anchor_right = 1.0
+anchor_bottom = 0.50600004
+offset_left = 8.0
+offset_top = 0.06399536
+offset_bottom = 16.111969
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.21960784, 0, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("1_yoymy")
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[wave] [center] press \"space\" to start 
+"
+scroll_active = false
+script = ExtResource("2_4pk4p")

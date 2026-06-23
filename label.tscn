@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ce2n73u08grwv"]
+
+[node name="RichTextLabel" type="RichTextLabel" unique_id=81578974]
+offset_left = 135.0
+offset_top = 327.0
+offset_right = 969.0
+offset_bottom = 379.0
+theme_override_font_sizes/normal_font_size = 38
+bbcode_enabled = true
+text = "[center] press \"space\" to start
+"

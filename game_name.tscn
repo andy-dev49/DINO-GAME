@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d1ef3o348wudr"]
+
+[ext_resource type="FontFile" uid="uid://cyscx3uyp3w0p" path="res://assets/fonts/retro.ttf" id="1_y8df4"]
+
+[node name="game_name" type="RichTextLabel" unique_id=1166990926]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_fonts/bold_font = ExtResource("1_y8df4")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 73
+bbcode_enabled = true
+text = "[center] [b] [rainbow] [shake] DAINO GAME "
+scroll_active = false

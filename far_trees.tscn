@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://q2v2cih2tg5c"]
+
+[ext_resource type="Script" uid="uid://dp7wo1m17nqag" path="res://far_trees.gd" id="1_x0kd6"]
+[ext_resource type="Texture2D" uid="uid://drous2lkfiiio" path="res://assets/img/background/plx-2.png" id="2_1ueu4"]
+
+[node name="far trees" type="Parallax2D" unique_id=476780373]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-20, 0)
+script = ExtResource("1_x0kd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=390581848]
+texture = ExtResource("2_1ueu4")
+centered = false

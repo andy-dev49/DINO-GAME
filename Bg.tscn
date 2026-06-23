@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bpgflbcjlyuww"]
+
+[ext_resource type="PackedScene" uid="uid://q2v2cih2tg5c" path="res://far_trees.tscn" id="2_6g7to"]
+[ext_resource type="PackedScene" uid="uid://bc1b5yjns31yx" path="res://mid_trees.tscn" id="3_lf8xo"]
+[ext_resource type="PackedScene" uid="uid://c7e27dvcw4rk3" path="res://close_tree.tscn" id="4_a4rcv"]
+[ext_resource type="PackedScene" uid="uid://dgp5d3ql8g6u8" path="res://closed_tree.tscn" id="5_7ciwh"]
+
+[node name="Node2D" type="Node2D" unique_id=1849318124]
+
+[node name="far trees" parent="." unique_id=476780373 instance=ExtResource("2_6g7to")]
+
+[node name="mid trees" parent="." unique_id=1523140083 instance=ExtResource("3_lf8xo")]
+
+[node name="close tree" parent="." unique_id=1518767519 instance=ExtResource("4_a4rcv")]
+
+[node name="closed tree" parent="." unique_id=431907774 instance=ExtResource("5_7ciwh")]

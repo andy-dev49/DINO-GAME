@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ddtqggpviyysn"]
+
+[ext_resource type="FontFile" uid="uid://cyscx3uyp3w0p" path="res://assets/fonts/retro.ttf" id="1_6ub14"]
+[ext_resource type="Script" uid="uid://w3umlij6d8nx" path="res://high_score.gd" id="2_xei6d"]
+
+[node name="high_score" type="Label" unique_id=1020851937]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -232.0
+offset_bottom = 56.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0, 0.5372549, 1)
+theme_override_fonts/font = ExtResource("1_6ub14")
+theme_override_font_sizes/font_size = 22
+text = "high_score:"
+script = ExtResource("2_xei6d")

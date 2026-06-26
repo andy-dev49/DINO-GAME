@@ -4,6 +4,12 @@ An endless 2D runner game built from scratch using the **Godot Engine 4.6**. The
 
 ---
 
+### 📸 Project Preview
+
+<img width="1149" height="648" alt="dino_game Screenshot 2026 06 26 - 21 46 11 10" src="https://github.com/user-attachments/assets/b285cf4d-c5e5-415d-bd99-bb49991975ce" />
+
+---
+
 ### 🚀 Key Technical Features
 
 * **Variable Jump System:** Responsive and dynamic jumping mechanics where the jump height is determined by the duration of the button press, providing tight and precise player control.
@@ -13,11 +19,24 @@ An endless 2D runner game built from scratch using the **Godot Engine 4.6**. The
 
 ---
 
+### ⚙️ Game Mechanics & Physics (In-Action)
+
+<img width="800" height="450" alt="dino damage" src="https://github.com/user-attachments/assets/81fd51ee-da5c-4482-b1ef-41cdd3e59ffb" />
+
+---
+
 ### 🛠️ Tech Stack & Concepts Used
 
 * **Engine:** Godot 4.6 (Compatibility Mode)
 * **Language:** GDScript
 * **Patterns:** Object Pooling (for obstacles), State checking, and Local Data Persistence.
+
+---
+
+### 💀 Game Over State
+
+<img width="800" height="450" alt="ezgif-2d7874a2c2ee7909" src="https://github.com/user-attachments/assets/6dd8f10d-e409-4d6e-9d9d-bf60cb0fd371" />
+
 
 ---
 

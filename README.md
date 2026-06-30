@@ -61,4 +61,4 @@ An endless 2D runner game built from scratch using the **Godot Engine 4.6**. The
 * `main.gd`: The core game logic managing timers, score calculation, speed progression, and save states.
 
 ---
-_Developed by Andy Builds as part of my Indie Game Dev journey._
+_Developed by Andy_dev as part of my Indie Game Dev journey._
